@@ -3,6 +3,7 @@
 ## How To
 
 This library provide a helper to handle transaction in saga pattern, and handle its compensation transaction when error happen asynchronously as a rollback action.
+
 It uses Redis Pub-Sub mechanism to publish the Saga Log to Redis. The consumer will listen to the event, and run the compensation for transaction error based on predefined stub.
 
 ## Redis Initialization
