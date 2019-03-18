@@ -1,6 +1,6 @@
 # XAGA - Redis Powered Saga Helper
 
-## How To
+## About
 
 This library provide a helper to handle transaction in saga pattern, and handle its compensation transaction when error happen asynchronously as a rollback action.
 
