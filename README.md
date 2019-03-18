@@ -70,8 +70,8 @@ c := xaga.NewConsumer(topic, r)
 ### Register Compensation Transaction
 
 ```
-c.RegisterCompensation("state_transaction_1", compensateTx1)
-c.RegisterCompensation("state_transaction_2", compensateTx2)
+c.RegisterCompensation("STATE_1", compensateTx1)
+c.RegisterCompensation("STATE_2", compensateTx2)
 ```
 Then we can create a callback to be registered
 
@@ -101,8 +101,8 @@ term := make(chan os.Signal, 1)
 signal.Notify(term, os.Interrupt, syscall.SIGTERM)
 //register compensation
 c := xaga.NewConsumer(topic, r)
-c.RegisterCompensation("state_transaction_1", compensateTx1)
-c.RegisterCompensation("state_transaction_2", compensateTx2)
+c.RegisterCompensation("STATE_1", compensateTx1)
+c.RegisterCompensation("STATE_2", compensateTx2)
 //listen for compensation event
 go func() {
     c.Run()
